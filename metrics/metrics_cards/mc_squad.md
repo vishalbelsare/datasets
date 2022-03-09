@@ -3,7 +3,7 @@ This metric wrap the official scoring script for version 1 of the [Stanford Ques
 
 
 ## Intended uses & limitations
-This metric works only with the SQuAD v.1 dataset -- it will not work with any other dataset formats.
+This metric works only with the [SQuAD v.1 dataset](https://huggingface.co/datasets/squad) -- it will not work with any other dataset formats.
 
 ## How to use 
 
