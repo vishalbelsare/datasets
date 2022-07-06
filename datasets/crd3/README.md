@@ -4,9 +4,9 @@ annotations_creators:
 - no-annotation
 language_creators:
 - crowdsourced
-languages:
+language:
 - en
-licenses:
+license:
 - cc-by-sa-4.0
 multilinguality:
 - monolingual
@@ -76,8 +76,6 @@ and semantic ties to the previous dialogues.
 The text in the dataset is in English, as spoken by actors on The Critical Role show, which is a weekly unscripted, live-stream of a fixed group of people playing Dungeons and Dragons, a popular role-playing game.
 
 ## Dataset Structure
-
-We show detailed information for up to 5 configurations of the dataset.
 
 ### Data Instances
 

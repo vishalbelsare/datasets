@@ -1,5 +1,5 @@
 ---
-languages:
+language:
 - en
 paperswithcode_id: anli
 pretty_name: Adversarial NLI
@@ -57,8 +57,6 @@ It contains three rounds. Each round has train/dev/test splits.
 English
 
 ## Dataset Structure
-
-We show detailed information for up to 5 configurations of the dataset.
 
 ### Data Instances
 

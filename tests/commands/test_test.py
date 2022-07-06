@@ -10,8 +10,8 @@ from datasets.commands.test import TestCommand
 
 
 if config.PY_VERSION >= version.parse("3.7"):
-    TestCommandArgs = namedtuple(
-        "TestCommandArgs",
+    _TestCommandArgs = namedtuple(
+        "_TestCommandArgs",
         [
             "dataset",
             "name",
@@ -22,15 +22,13 @@ if config.PY_VERSION >= version.parse("3.7"):
             "ignore_verifications",
             "force_redownload",
             "clear_cache",
-            "proc_rank",
-            "num_proc",
         ],
-        defaults=[None, None, None, False, False, False, False, False, 0, 1],
+        defaults=[None, None, None, False, False, False, False, False],
     )
 else:
 
     @dataclass
-    class TestCommandArgs:
+    class _TestCommandArgs:
         dataset: str
         name: str = None
         cache_dir: str = None
@@ -40,15 +38,13 @@ else:
         ignore_verifications: bool = False
         force_redownload: bool = False
         clear_cache: bool = False
-        proc_rank: int = 0
-        num_proc: int = 1
 
         def __iter__(self):
             return iter(self.__dict__.values())
 
 
 def test_test_command(dataset_loading_script_dir):
-    args = TestCommandArgs(dataset=dataset_loading_script_dir, all_configs=True, save_infos=True)
+    args = _TestCommandArgs(dataset=dataset_loading_script_dir, all_configs=True, save_infos=True)
     test_command = TestCommand(*args)
     test_command.run()
     dataset_infos_path = os.path.join(dataset_loading_script_dir, config.DATASETDICT_INFOS_FILENAME)

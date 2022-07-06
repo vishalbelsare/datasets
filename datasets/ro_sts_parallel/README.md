@@ -1,11 +1,12 @@
 ---
-annotations_creators: []
+annotations_creators:
+- crowdsourced
 language_creators:
 - crowdsourced
-languages:
+language:
 - ro
 - en
-licenses:
+license:
 - cc-by-4.0
 multilinguality:
 - multilingual

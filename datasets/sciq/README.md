@@ -1,5 +1,5 @@
 ---
-languages:
+language:
 - en
 paperswithcode_id: sciq
 pretty_name: SciQ
@@ -54,8 +54,6 @@ The SciQ dataset contains 13,679 crowdsourced science exam questions about Physi
 [More Information Needed](https://github.com/huggingface/datasets/blob/master/CONTRIBUTING.md#how-to-contribute-to-the-dataset-cards)
 
 ## Dataset Structure
-
-We show detailed information for up to 5 configurations of the dataset.
 
 ### Data Instances
 

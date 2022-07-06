@@ -3,20 +3,11 @@ annotations_creators:
 - crowdsourced
 language_creators:
 - crowdsourced
-languages:
-  en:
-  - en
-  de:
-  - de
-  it:
-  - it
-  de_en:
-  - en
-  - de
-  it_en:
-  - en
-  - it
-licenses:
+language:
+- de
+- en
+- it
+license:
 - unknown
 multilinguality:
 - monolingual
@@ -35,6 +26,12 @@ task_ids:
 - parsing
 paperswithcode_id: wizard-of-oz
 pretty_name: Wizard-of-Oz
+configs:
+- de
+- de_en
+- en
+- it
+- it_en
 ---
 
 # Dataset Card Creation Guide

@@ -32,6 +32,7 @@ from .features.features import (
     get_nested_type,
     list_of_np_array_to_pyarrow_listarray,
     numpy_to_pyarrow_listarray,
+    to_pyarrow_listarray,
 )
 from .info import DatasetInfo
 from .keyhash import DuplicatedKeysError, KeyHasher
@@ -169,12 +170,7 @@ class TypedSequence:
         try:
             # custom pyarrow types
             if isinstance(pa_type, _ArrayXDExtensionType):
-                if isinstance(data, np.ndarray):
-                    storage = numpy_to_pyarrow_listarray(data, type=pa_type.value_type)
-                elif isinstance(data, list) and data and isinstance(first_non_null_value(data)[1], np.ndarray):
-                    storage = list_of_np_array_to_pyarrow_listarray(data, type=pa_type.value_type)
-                else:
-                    storage = pa.array(data, pa_type.storage_dtype)
+                storage = to_pyarrow_listarray(data, pa_type)
                 return pa.ExtensionArray.from_storage(pa_type, storage)
 
             # efficient np array to pyarrow array
@@ -460,7 +456,13 @@ class ArrowWriter:
         tmp_record = set()
         for hash, key in self.hkey_record:
             if hash in tmp_record:
-                raise DuplicatedKeysError(key)
+                duplicate_key_indices = [
+                    str(self._num_examples + index)
+                    for index, (duplicate_hash, _) in enumerate(self.hkey_record)
+                    if duplicate_hash == hash
+                ]
+
+                raise DuplicatedKeysError(key, duplicate_key_indices)
             else:
                 tmp_record.add(hash)
 
@@ -478,7 +480,7 @@ class ArrowWriter:
 
     def write_batch(
         self,
-        batch_examples: Dict[str, List[Any]],
+        batch_examples: Dict[str, List],
         writer_batch_size: Optional[int] = None,
     ):
         """Write a batch of Example to file.

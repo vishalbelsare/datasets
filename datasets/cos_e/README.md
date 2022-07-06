@@ -1,5 +1,5 @@
 ---
-languages:
+language:
 - en
 paperswithcode_id: cos-e
 pretty_name: Commonsense Explanations Dataset
@@ -56,8 +56,6 @@ inference in a novel Commonsense Auto-Generated Explanation (CAGE) framework.
 [More Information Needed](https://github.com/huggingface/datasets/blob/master/CONTRIBUTING.md#how-to-contribute-to-the-dataset-cards)
 
 ## Dataset Structure
-
-We show detailed information for up to 5 configurations of the dataset.
 
 ### Data Instances
 

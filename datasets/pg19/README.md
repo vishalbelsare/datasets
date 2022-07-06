@@ -1,5 +1,5 @@
 ---
-languages:
+language:
 - en
 paperswithcode_id: pg-19
 pretty_name: PG-19
@@ -63,8 +63,6 @@ One could use this dataset for benchmarking long-range language models, or use i
 [More Information Needed](https://github.com/huggingface/datasets/blob/master/CONTRIBUTING.md#how-to-contribute-to-the-dataset-cards)
 
 ## Dataset Structure
-
-We show detailed information for up to 5 configurations of the dataset.
 
 ### Data Instances
 

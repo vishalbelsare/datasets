@@ -3,9 +3,9 @@ annotations_creators:
 - crowdsourced
 language_creators:
 - crowdsourced
-languages:
+language:
 - en
-licenses:
+license:
 - cc-by-4.0
 multilinguality:
 - monolingual
@@ -53,7 +53,7 @@ pretty_name: GLUCOSE
 
 - **[Repository](https://github.com/TevenLeScao/glucose)**
 - **[Paper](https://arxiv.org/abs/2009.07758)**
-- **Point of Contact: [glucose@elementalcognition.com](mailto:glucose@elementalcognition.com)**
+- **Point of Contact:** [glucose@elementalcognition.com](mailto:glucose@elementalcognition.com)
 
 ### Dataset Summary
 

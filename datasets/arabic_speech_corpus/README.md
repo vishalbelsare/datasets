@@ -4,9 +4,9 @@ annotations_creators:
 - expert-generated
 language_creators:
 - crowdsourced
-languages:
+language:
 - ar
-licenses:
+license:
 - cc-by-4.0
 multilinguality:
 - monolingual
@@ -18,6 +18,21 @@ source_datasets:
 task_categories:
 - automatic-speech-recognition
 task_ids: []
+train-eval-index:
+- config: clean
+  task: automatic-speech-recognition
+  task_id: speech_recognition
+  splits:
+    train_split: train
+    eval_split: test
+  col_mapping:
+    file: path
+    text: text
+  metrics:
+  - type: wer
+    name: WER
+  - type: cer
+    name: CER
 ---
 
 # Dataset Card for Arabic Speech Corpus

@@ -1,5 +1,5 @@
 ---
-languages:
+language:
 - en
 paperswithcode_id: superglue
 pretty_name: SuperGLUE
@@ -61,8 +61,6 @@ Wikipedia article containing the answer. Following the original work, we evaluat
 [More Information Needed](https://github.com/huggingface/datasets/blob/master/CONTRIBUTING.md#how-to-contribute-to-the-dataset-cards)
 
 ## Dataset Structure
-
-We show detailed information for up to 5 configurations of the dataset.
 
 ### Data Instances
 

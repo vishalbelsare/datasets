@@ -1,5 +1,5 @@
 ---
-languages:
+language:
 - en
 paperswithcode_id: definite-pronoun-resolution-dataset
 pretty_name: Definite Pronoun Resolution Dataset
@@ -62,8 +62,6 @@ more than once in the sentence, its first occurrence is the one to be resolved.
 [More Information Needed](https://github.com/huggingface/datasets/blob/master/CONTRIBUTING.md#how-to-contribute-to-the-dataset-cards)
 
 ## Dataset Structure
-
-We show detailed information for up to 5 configurations of the dataset.
 
 ### Data Instances
 

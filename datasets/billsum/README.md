@@ -3,9 +3,9 @@ annotations_creators:
 - found
 language_creators:
 - found
-languages:
+language:
 - en
-licenses:
+license:
 - unknown
 multilinguality:
 - monolingual
@@ -19,6 +19,19 @@ task_ids:
 - summarization-other-bills-summarization
 paperswithcode_id: billsum
 pretty_name: BillSum
+train-eval-index:
+- config: default
+  task: summarization
+  task_id: summarization
+  splits:
+    train_split: train
+    eval_split: test
+  col_mapping:
+    text: text
+    summary: target
+  metrics:
+    - type: rouge
+      name: Rouge
 ---
 
 # Dataset Card for "billsum"
@@ -78,8 +91,6 @@ features for us bills. ca bills does not have.
 [More Information Needed](https://github.com/huggingface/datasets/blob/master/CONTRIBUTING.md#how-to-contribute-to-the-dataset-cards)
 
 ## Dataset Structure
-
-We show detailed information for up to 5 configurations of the dataset.
 
 ### Data Instances
 

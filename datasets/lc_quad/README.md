@@ -1,5 +1,5 @@
 ---
-languages:
+language:
 - en
 paperswithcode_id: lc-quad-2-0
 pretty_name: "LC-QuAD 2.0: Large-scale Complex Question Answering Dataset"
@@ -54,8 +54,6 @@ LC-QuAD 2.0 is a Large Question Answering dataset with 30,000 pairs of question 
 [More Information Needed](https://github.com/huggingface/datasets/blob/master/CONTRIBUTING.md#how-to-contribute-to-the-dataset-cards)
 
 ## Dataset Structure
-
-We show detailed information for up to 5 configurations of the dataset.
 
 ### Data Instances
 

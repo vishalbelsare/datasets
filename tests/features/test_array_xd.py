@@ -335,10 +335,28 @@ def test_array_xd_with_none():
     dummy_array = np.array([[1, 2], [3, 4]], dtype="int32")
     dataset = datasets.Dataset.from_dict({"foo": [dummy_array, None, dummy_array]}, features=features)
     arr = NumpyArrowExtractor().extract_column(dataset._data)
-    assert isinstance(arr, np.ndarray) and arr.dtype == np.object and arr.shape == (3,)
+    assert isinstance(arr, np.ndarray) and arr.dtype == object and arr.shape == (3,)
     np.testing.assert_equal(arr[0], dummy_array)
     np.testing.assert_equal(arr[2], dummy_array)
     assert np.isnan(arr[1])  # a single np.nan value - np.all not needed
+
+
+@pytest.mark.parametrize(
+    "data, feature, expected",
+    [
+        (np.zeros((2, 2)), None, [[0.0, 0.0], [0.0, 0.0]]),
+        (np.zeros((2, 3)), datasets.Array2D(shape=(2, 3), dtype="float32"), [[0.0, 0.0, 0.0], [0.0, 0.0, 0.0]]),
+        ([np.zeros(2)], datasets.Array2D(shape=(1, 2), dtype="float32"), [[0.0, 0.0]]),
+        (
+            [np.zeros((2, 3))],
+            datasets.Array3D(shape=(1, 2, 3), dtype="float32"),
+            [[[0.0, 0.0, 0.0], [0.0, 0.0, 0.0]]],
+        ),
+    ],
+)
+def test_array_xd_with_np(data, feature, expected):
+    ds = datasets.Dataset.from_dict({"col": [data]}, features=datasets.Features({"col": feature}) if feature else None)
+    assert ds[0]["col"] == expected
 
 
 @pytest.mark.parametrize("with_none", [False, True])

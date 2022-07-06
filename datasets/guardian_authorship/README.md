@@ -1,5 +1,5 @@
 ---
-languages:
+language:
 - en
 paperswithcode_id: null
 pretty_name: GuardianAuthorship
@@ -67,8 +67,6 @@ IMPORTANT: train+validation+test[:60%] will generate the wrong splits becasue th
 [More Information Needed](https://github.com/huggingface/datasets/blob/master/CONTRIBUTING.md#how-to-contribute-to-the-dataset-cards)
 
 ## Dataset Structure
-
-We show detailed information for up to 5 configurations of the dataset.
 
 ### Data Instances
 

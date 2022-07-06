@@ -3,7 +3,7 @@ annotations_creators:
 - machine-generated
 language_creators:
 - found
-languages:
+language:
 - ca
 - de
 - es
@@ -44,7 +44,7 @@ languages:
 - sl
 - th
 - uk
-licenses:
+license:
 - unknown
 multilinguality:
 - multilingual
@@ -115,8 +115,6 @@ corresponding to a different language. For example, "es" includes only spanish e
 [More Information Needed](https://github.com/huggingface/datasets/blob/master/CONTRIBUTING.md#how-to-contribute-to-the-dataset-cards)
 
 ## Dataset Structure
-
-We show detailed information for up to 5 configurations of the dataset.
 
 ### Data Instances
 

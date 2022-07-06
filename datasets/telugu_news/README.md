@@ -3,9 +3,9 @@ annotations_creators:
 - machine-generated
 language_creators:
 - other
-languages:
+language:
 - te
-licenses:
+license:
 - unknown
 multilinguality:
 - monolingual
@@ -54,8 +54,8 @@ pretty_name: TeluguNews
 
 ## Dataset Description
 
-- **Homepage: https://www.kaggle.com/sudalairajkumar/telugu-nlp?select=telugu_news
-- **Repository: https://github.com/AnushaMotamarri/Telugu-Newspaper-Article-Dataset
+- **Homepage:** https://www.kaggle.com/sudalairajkumar/telugu-nlp?select=telugu_news
+- **Repository:** https://github.com/AnushaMotamarri/Telugu-Newspaper-Article-Dataset
 
 
 ### Dataset Summary

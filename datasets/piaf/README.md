@@ -3,9 +3,9 @@ annotations_creators:
 - crowdsourced
 language_creators:
 - crowdsourced
-languages:
+language:
 - fr-FR
-licenses:
+license:
 - mit
 multilinguality:
 - monolingual
@@ -71,8 +71,6 @@ Piaf is a reading comprehension dataset. This version, published in February 202
 [More Information Needed](https://github.com/huggingface/datasets/blob/master/CONTRIBUTING.md#how-to-contribute-to-the-dataset-cards)
 
 ## Dataset Structure
-
-We show detailed information for up to 5 configurations of the dataset.
 
 ### Data Instances
 

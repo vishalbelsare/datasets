@@ -3,9 +3,9 @@ annotations_creators:
 - no-annotation
 language_creators:
 - expert-generated
-languages:
+language:
 - sw
-licenses:
+license:
 - cc-by-4.0
 multilinguality:
 - monolingual
@@ -51,11 +51,11 @@ pretty_name: swahili
 
 ## Dataset Description
 
-- **Homepage: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7339006/**
-- **Repository: NA**
-- **Paper: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7339006/**
-- **Leaderboard: [More Information Needed]**
-- **Point of Contact: [More Information Needed]**
+- **Homepage:** https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7339006/
+- **Repository:**
+- **Paper:** https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7339006/
+- **Leaderboard:** [More Information Needed]
+- **Point of Contact:** [More Information Needed]
 
 ### Dataset Summary
 
